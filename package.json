@@ -1,0 +1,29 @@
+{
+  "name": "persian-art",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack-common.js --open" ,
+    "dev": "webpack --config webpack-common.js " 
+
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awesomeahmad/persian-art.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/awesomeahmad/persian-art/issues"
+  },
+  "homepage": "https://github.com/awesomeahmad/persian-art#readme",
+  "dependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
