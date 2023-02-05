@@ -5,24 +5,14 @@ import axios  from    'axios'
 
 const prodUrl = "http://localhost:8000/api/ProductsApi"
 
-const fetchProducts = () => {
-    try
-    {
-        const prodsFromDb =  axios.get(prodUrl)   
+const fetchProducts = async () => {
+        const prodsFromDb =  await axios.get(prodUrl)   
         return prodsFromDb.data
-
-    }
-    catch(e)
-    {
-        console.log(e)
-    }
-   
-
 }
 
 $(function(){
-    $('#btnGetProducts').on('click', ()   => {
-        const prods =   fetchProducts()
+    $('#btnGetProducts').on('click', async()   => {
+        const prods =   await fetchProducts()
         console.log(prods )
     })
 })
