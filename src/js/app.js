@@ -1,2 +1,2 @@
-alert('from master')
-alert('from dev')
+
+import 'bootstrap/dist/css/bootstrap.min.css'
