@@ -4,13 +4,8 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-<<<<<<< HEAD
     "start": "webpack-dev-server --config webpack-dev.js --open",
     "build": "webpack --config webpack-production.js "
-=======
-    "start": "webpack-dev-server --config webpack-common.js --open",
-    "dev": "webpack --config webpack-common.js "
->>>>>>> e29d8c8 (add bootstrap)
   },
   "repository": {
     "type": "git",
