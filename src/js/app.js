@@ -5,23 +5,29 @@ import axios  from    'axios'
 
 const prodUrl = "http://localhost:8000/api/ProductsApi"
 
-const fetchProducts =  async() => {
-    try
-    {
-        const prodsFromDb = await  axios.get(prodUrl)   
-        return prodsFromDb.data        
+const productSrvr = (function()
+{
+    productSrvr.get = async() => {
+        try
+        {
+            const prodsFromDb = await  axios.get(prodUrl)   
+            return prodsFromDb.data        
+        }
+        catch(e)
+        {
+            console.log(e )
+        }
     }
-    catch(e)
-    {
-        console.log(e )
-    }
-       
+    return productSrvr
+})()
+ 
+const dispProducts = (products) => {
+    console.log(products )   
 }
 
-let junk = 'junk'
 $(function(){
-    $('#btnGetProducts').on('click', async()   => {
-        const prods =   await fetchProducts()
-        console.log(prods )
+    $('#btnGetProducts').on('click', ()   => {
+        productSrvr.get().done(dispProducts)
+     
     })
 })
