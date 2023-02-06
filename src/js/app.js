@@ -18,6 +18,7 @@ const fetchProducts =  () => {
        
 }
 
+let junk = 'junk'
 $(function(){
     $('#btnGetProducts').on('click', async()   => {
         const prods =   await fetchProducts()
