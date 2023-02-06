@@ -5,10 +5,10 @@ import axios  from    'axios'
 
 const prodUrl = "http://localhost:8000/api/ProductsApi"
 
-const fetchProducts =  () => {
+const fetchProducts =  async() => {
     try
     {
-        const prodsFromDb =   axios.get(prodUrl)   
+        const prodsFromDb = await  axios.get(prodUrl)   
         return prodsFromDb.data        
     }
     catch(e)
