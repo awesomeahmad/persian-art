@@ -30,7 +30,7 @@ const dispProducts = (products) => {
 
 $(function(){
     $('#btnGetProducts').on('click', ()   => {
-        productSrvr.get().done(dispProducts)
+        productSrvr.get().then(dispProducts)
      
     })
 })
