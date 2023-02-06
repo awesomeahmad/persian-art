@@ -5,9 +5,17 @@ import axios  from    'axios'
 
 const prodUrl = "http://localhost:8000/api/ProductsApi"
 
-const fetchProducts = async () => {
-        const prodsFromDb =  await axios.get(prodUrl)   
-        return prodsFromDb.data
+const fetchProducts =  () => {
+    try
+    {
+        const prodsFromDb =   axios.get(prodUrl)   
+        return prodsFromDb.data        
+    }
+    catch(e)
+    {
+        console.log(e )
+    }
+       
 }
 
 $(function(){
