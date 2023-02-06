@@ -7,7 +7,9 @@ const prodUrl = "http://localhost:8000/api/ProductsApi"
 
 const productSrvr = (function()
 {
-    productSrvr.get = async() => {
+    const productSrvrApi = {}
+
+    productSrvrApi.get = async() => {
         try
         {
             const prodsFromDb = await  axios.get(prodUrl)   
@@ -18,8 +20,9 @@ const productSrvr = (function()
             console.log(e )
         }
     }
-    return productSrvr
+    return productSrvrApi
 })()
+
  
 const dispProducts = (products) => {
     console.log(products )   
