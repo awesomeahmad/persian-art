@@ -20,6 +20,19 @@ const productSrvr = (function()
             console.log(e )
         }
     }
+    productSrvrApi.getById = async (id) => {
+        const prodUrlById = `${prodUrl}/${id}`
+        try
+        {
+            const prodsFromDb = await  axios.get(prodUrlById)   
+            return prodsFromDb.data        
+        }
+        catch(e)
+        {
+            console.log(e )
+        }
+    }
+
     return productSrvrApi
 })()
 
